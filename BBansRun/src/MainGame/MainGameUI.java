@@ -1,5 +1,5 @@
 package MainGame;
 
 public class MainGameUI{
-	int a = 7;
+	int a = 10;
 }
