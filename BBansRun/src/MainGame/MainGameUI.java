@@ -1,5 +1,5 @@
 package MainGame;
 
-public class BBansRuns {
+public class MainGameUI{
 
 }
