@@ -30,9 +30,9 @@ public class MainUI {
 		Container c = new Container();
 		pn.setLayout(null); 		
 		
-		JButton option = new JButton("¿É¼Ç");
-		JButton exit = new JButton("³ª°¡±â");
-		JButton start = new JButton("°ÔÀÓ½ÃÀÛ");
+		JButton option = new JButton("ï¿½É¼ï¿½");
+		JButton exit = new JButton("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		JButton start = new JButton("ï¿½ï¿½ï¿½Ó½ï¿½ï¿½ï¿½");
 		
 		option.setLocation(0,0);
 		option.setSize(140,70);
@@ -45,20 +45,20 @@ public class MainUI {
 			public void actionPerformed(ActionEvent e) {
 
 			if(e.getSource() == option) {															
-						JFrame MyFrame = new JFrame("¿É¼Ç");
+						JFrame MyFrame = new JFrame("ï¿½É¼ï¿½");
 						MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 						MyFrame.setSize(300, 150);
 						MyFrame.setLocationRelativeTo(null);
 						MyFrame.setLayout(new FlowLayout());
 						MyFrame.setLayout(new GridLayout(3, 3));
 						
-						JLabel Label1 = new JLabel("º¼·ý ");
-						JRadioButton On = new JRadioButton("ÄÑ±â");
-						JRadioButton Off = new JRadioButton("²ô±â");
-						JLabel Label2 = new JLabel("È­¸é ");
-						JRadioButton WindowMode = new JRadioButton("Ã¢¸ðµå");
-						JRadioButton FullMode = new JRadioButton("ÀüÃ¼È­¸é");
-						JButton Ok = new JButton("È®ÀÎ");
+						JLabel Label1 = new JLabel("ï¿½ï¿½ï¿½ï¿½ ");
+						JRadioButton On = new JRadioButton("ï¿½Ñ±ï¿½");
+						JRadioButton Off = new JRadioButton("ï¿½ï¿½ï¿½ï¿½");
+						JLabel Label2 = new JLabel("È­ï¿½ï¿½ ");
+						JRadioButton WindowMode = new JRadioButton("Ã¢ï¿½ï¿½ï¿½");
+						JRadioButton FullMode = new JRadioButton("ï¿½ï¿½Ã¼È­ï¿½ï¿½");
+						JButton Ok = new JButton("È®ï¿½ï¿½");
 						JLabel Label3 = new JLabel("");
 						JLabel Label4 = new JLabel("");
 						

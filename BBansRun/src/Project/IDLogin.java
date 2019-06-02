@@ -17,15 +17,15 @@ class IDLogin {
 	public static Object Ok;
 
 	public IDLogin() {
-			JFrame MyFrame = new JFrame("·Î±×ÀÎÃ¢");
+			JFrame MyFrame = new JFrame("ï¿½Î±ï¿½ï¿½ï¿½Ã¢");
 			MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			MyFrame.setSize(300, 150);
 			MyFrame.setLocationRelativeTo(null);
 			MyFrame.setLayout(new FlowLayout());
 			
-			JLabel Label1 = new JLabel("´ëÇ¥ ´Ð³×ÀÓÀ» ¼³Á¤ÇØÁÖ¼¼¿ä!");
+			JLabel Label1 = new JLabel("ï¿½ï¿½Ç¥ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½!");
 			JTextField tf = new JTextField(20);
-			JButton Ok = new JButton("È®ÀÎ");  	
+			JButton Ok = new JButton("È®ï¿½ï¿½");  	
 			
 			JRootPane  rootPane  =  MyFrame.getRootPane();
 			rootPane.setDefaultButton(Ok); 
@@ -60,15 +60,15 @@ class IDLogin {
 	
 //       public static void main(String args[]){
 //    	   
-//    	   	JFrame MyFrame = new JFrame("·Î±×ÀÎÃ¢");
+//    	   	JFrame MyFrame = new JFrame("ï¿½Î±ï¿½ï¿½ï¿½Ã¢");
 //   			MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //   			MyFrame.setSize(300, 150);
 //   			MyFrame.setLocationRelativeTo(null);
 //   			MyFrame.setLayout(new FlowLayout());
 //   			
-//   			JLabel Label1 = new JLabel("´ëÇ¥ ´Ð³×ÀÓÀ» ¼³Á¤ÇØÁÖ¼¼¿ä!");
+//   			JLabel Label1 = new JLabel("ï¿½ï¿½Ç¥ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½!");
 //   			JTextField tf = new JTextField(20);
-//   			JButton Ok = new JButton("È®ÀÎ");  	
+//   			JButton Ok = new JButton("È®ï¿½ï¿½");  	
 //   			
 //   			JRootPane  rootPane  =  MyFrame.getRootPane();
 //   			rootPane.setDefaultButton(Ok); 
