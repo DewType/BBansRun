@@ -17,15 +17,15 @@ class IDLogin {
 	public static Object Ok;
 
 	public IDLogin() {
-			JFrame MyFrame = new JFrame("�α���â");
+			JFrame MyFrame = new JFrame("로그인창");
 			MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			MyFrame.setSize(300, 150);
 			MyFrame.setLocationRelativeTo(null);
 			MyFrame.setLayout(new FlowLayout());
 			
-			JLabel Label1 = new JLabel("��ǥ �г����� �������ּ���!");
+			JLabel Label1 = new JLabel("아이디를 입력해주세요!");
 			JTextField tf = new JTextField(20);
-			JButton Ok = new JButton("Ȯ��");  	
+			JButton Ok = new JButton("확인");  	
 			
 			JRootPane  rootPane  =  MyFrame.getRootPane();
 			rootPane.setDefaultButton(Ok); 

@@ -13,6 +13,8 @@ public class MenuParticle extends GameObject{
 	
 	private Color col;
 	
+
+	
 	public MenuParticle(int x, int y, ID id, Handler handler) {
 		super(x, y, id);
 		

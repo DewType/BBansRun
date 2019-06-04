@@ -38,6 +38,10 @@ public class Game extends Canvas implements Runnable{
 	
 	public static STATE gameState = STATE.Menu;
 	
+	public static void cheol() {
+		main(null);
+	}
+	
 	public Game() {
 		new Window(WIDTH,HEIGHT,"BBansRun",this);
 		
@@ -46,7 +50,7 @@ public class Game extends Canvas implements Runnable{
 		
 		shop = new Shop(handler,hud);
 		menu = new Menu(this,handler,hud);
-		this.addKeyListener(new KeyInput(handler));		//키매니저
+		this.addKeyListener(new KeyInput(handler));		//�궎留ㅻ땲��
 		this.addMouseListener(menu);
 		this.addMouseListener(shop);
 		
@@ -71,7 +75,7 @@ public class Game extends Canvas implements Runnable{
 	
 	public void run()
 	{
-		this.requestFocus();		//프로그램을 돌리자마자 이곳으로 포커스를 잡아준다
+		this.requestFocus();		//�봽濡쒓렇�옩�쓣 �룎由ъ옄留덉옄 �씠怨녹쑝濡� �룷而ㅼ뒪瑜� �옟�븘以��떎
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;
@@ -83,11 +87,11 @@ public class Game extends Canvas implements Runnable{
 			delta += (now - lastTime) / ns;
 			lastTime = now;
 			while(delta >= 1) {
-				tick();				//쓰레드를 사용해서 특정시간마다 업데이트를 돌려준다
+				tick();				//�벐�젅�뱶瑜� �궗�슜�빐�꽌 �듅�젙�떆媛꾨쭏�떎 �뾽�뜲�씠�듃瑜� �룎�젮以��떎
 				delta--;
 			}
 			if(running)
-				render();			//마찬가지로 특정시간마다 렌더를 돌려준다
+				render();			//留덉갔媛�吏�濡� �듅�젙�떆媛꾨쭏�떎 �젋�뜑瑜� �룎�젮以��떎
 			
 			if(System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
@@ -134,7 +138,7 @@ public class Game extends Canvas implements Runnable{
 		{
 			hud.render(g);
 			handler.render(g);
-			spawner.render(g);			//나중에 지우기
+			spawner.render(g);			//�굹以묒뿉 吏��슦湲�
 		}else if(gameState == STATE.Shop){
 			shop.render(g);
 		}else if(gameState == STATE.Menu ||

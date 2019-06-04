@@ -2,11 +2,20 @@ package Project;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,28 +24,30 @@ import javax.swing.JRadioButton;
 
 
 public class MainUI {	
+	private static final InputStream Sound = null;
 	static String checkRadio1 = null;
 	static String checkRadio2 = null;
+	private static Image im;
+	
 	public void show() {
 		this.main(null);
 	}
 	public static void main(String[] args) {
 		JFrame JFmainUI = new JFrame("MAIN MENU");
 		JPanel pn = new JPanel();
-//		JFmainUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		JFmainUI.setSize(900, 500);
+		JFmainUI.setSize(640, 480);	//MainGame.Game.WIDTH ,MainGame.Game.HEIGHT
 		JFmainUI.setLocationRelativeTo(null);
-		
 		Container c = new Container();
 		pn.setLayout(null); 		
 		
-		JButton option = new JButton("�ɼ�");
-		JButton exit = new JButton("������");
-		JButton start = new JButton("���ӽ���");
+		JButton option = new JButton("옵션");
+		JButton exit = new JButton("나가기");
+		JButton start = new JButton("게임시작");
 		
+		File Clap =new File("C:\\\\Users\\\\Cheol\\\\git\\\\BBansRun\\\\BBansRun\\\\res\\\\ABC.mp3");
+	
 		option.setLocation(0,0);
 		option.setSize(140,70);
-		pn.add(option);
 		
 		option.addActionListener(new ActionListener() {
 
@@ -45,20 +56,20 @@ public class MainUI {
 			public void actionPerformed(ActionEvent e) {
 
 			if(e.getSource() == option) {															
-						JFrame MyFrame = new JFrame("�ɼ�");
+						JFrame MyFrame = new JFrame("옵션");
 						MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 						MyFrame.setSize(300, 150);
 						MyFrame.setLocationRelativeTo(null);
 						MyFrame.setLayout(new FlowLayout());
 						MyFrame.setLayout(new GridLayout(3, 3));
 						
-						JLabel Label1 = new JLabel("���� ");
-						JRadioButton On = new JRadioButton("�ѱ�");
-						JRadioButton Off = new JRadioButton("����");
-						JLabel Label2 = new JLabel("ȭ�� ");
-						JRadioButton WindowMode = new JRadioButton("â���");
-						JRadioButton FullMode = new JRadioButton("��üȭ��");
-						JButton Ok = new JButton("Ȯ��");
+						JLabel Label1 = new JLabel("볼륨 ");
+						JRadioButton On = new JRadioButton("켜기");
+						JRadioButton Off = new JRadioButton("끄기");
+						JLabel Label2 = new JLabel("모드");
+						JRadioButton WindowMode = new JRadioButton("창모드");
+						JRadioButton FullMode = new JRadioButton("전체모드");
+						JButton Ok = new JButton("확인");
 						JLabel Label3 = new JLabel("");
 						JLabel Label4 = new JLabel("");
 						
@@ -125,9 +136,8 @@ public class MainUI {
 		}
 	});
 		
-		exit.setLocation(747,0);
+		exit.setLocation(487,0);
 		exit.setSize(140,70);
-		pn.add(exit);
 		
 		exit.addActionListener(new ActionListener() {
 
@@ -141,9 +151,8 @@ public class MainUI {
 		}
 	});
 		
-		start.setLocation(350,363);
+		start.setLocation(220, 350);
 		start.setSize(200,100);
-		pn.add(start);
         
 		start.addActionListener(new ActionListener() {
 
@@ -152,16 +161,54 @@ public class MainUI {
 			public void actionPerformed(ActionEvent e) {
 
 			if(e.getSource() == start) {
-				
+				MainUI mainUi = new MainUI();
+				MainGame.Game.cheol();
+				JFmainUI.hide();
 			}
 		}
 	});
+		
+		ImageIcon image = new ImageIcon("C:\\Users\\Cheol\\git\\BBansRun\\BBansRun\\res\\BackGround.jpg");	
+		JLabel img = new JLabel(image);
+		img.setBounds(0, 0, 640, 480);
+		pn.add(img);
+		
+		class pn extends JPanel{
+            
+	        public void paintComponent(Graphics g){
+	            super.paintComponent(g);
+	            g.drawImage(im,0,0,getWidth(),getHeight(),this);
+	        }
+	    }
+		
+		
+		pn.add(option);
+		pn.add(exit);
+		pn.add(start);
 		
 		JFmainUI.setResizable(false);
 		JFmainUI.add(pn);
 		JFmainUI.setVisible(true);
 		
-    }	
+		
+    }
+	private static void PlaySound(String clap) 
+		{
+			try{
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File(clap));
+	            Clip clip = AudioSystem.getClip();
+	            clip.open(ais);
+	            clip.start();
+	            System.out.println("1111");
+			}
+			catch(Exception e)
+			{
+				
+			}
+		}
+
 }
+
+
 
 	
