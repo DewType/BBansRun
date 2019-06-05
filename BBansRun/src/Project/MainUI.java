@@ -42,9 +42,8 @@ public class MainUI {
 		
 		JButton option = new JButton("옵션");
 		JButton exit = new JButton("나가기");
-		JButton start = new JButton("게임시작");
+		JButton start = new JButton("케릭터 선택창");
 		
-		File Clap =new File("C:\\\\Users\\\\Cheol\\\\git\\\\BBansRun\\\\BBansRun\\\\res\\\\ABC.mp3");
 	
 		option.setLocation(0,0);
 		option.setSize(140,70);
@@ -162,7 +161,7 @@ public class MainUI {
 
 			if(e.getSource() == start) {
 				MainUI mainUi = new MainUI();
-				MainGame.Game.cheol();
+				Project.Pick.Cheol();
 				JFmainUI.hide();
 			}
 		}
@@ -192,21 +191,6 @@ public class MainUI {
 		
 		
     }
-	private static void PlaySound(String clap) 
-		{
-			try{
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File(clap));
-	            Clip clip = AudioSystem.getClip();
-	            clip.open(ais);
-	            clip.start();
-	            System.out.println("1111");
-			}
-			catch(Exception e)
-			{
-				
-			}
-		}
-
 }
 
 

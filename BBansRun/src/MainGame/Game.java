@@ -38,7 +38,7 @@ public class Game extends Canvas implements Runnable{
 	
 	public static STATE gameState = STATE.Menu;
 	
-	public static void cheol() {
+	public static void Han() {
 		main(null);
 	}
 	
