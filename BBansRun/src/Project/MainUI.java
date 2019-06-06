@@ -167,7 +167,7 @@ public class MainUI {
 		}
 	});
 		
-		ImageIcon image = new ImageIcon("C:\\Users\\Cheol\\git\\BBansRun\\BBansRun\\res\\BackGround.jpg");	
+		ImageIcon image = new ImageIcon("res\\BackGround.jpg");	
 		JLabel img = new JLabel(image);
 		img.setBounds(0, 0, 640, 480);
 		pn.add(img);
