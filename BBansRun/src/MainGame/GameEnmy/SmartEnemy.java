@@ -6,21 +6,21 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
 import MainGame.GameObject;
-import MainGame.HUD;
-import MainGame.Handler;
+import MainGame.InGameUi;
+import MainGame.ObjectManager;
 import MainGame.ID;
 import MainGame.MyUtility;
 import MainGame.Trail;
 
 public class SmartEnemy extends GameObject{
 	
-	private Handler handler;
+	private ObjectManager handler;
 	private GameObject player;
 	
 	private int greenAlpha = 255;
 	private boolean alpha = false;
 	
-	public SmartEnemy(float x, float y, ID id, Handler handler) {
+	public SmartEnemy(float x, float y, ID id, ObjectManager handler) {
 		super(x, y, id);
 		
 		this.handler = handler;
