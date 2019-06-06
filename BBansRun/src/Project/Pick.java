@@ -14,16 +14,22 @@ import javax.swing.JPanel;
 
 public class Pick extends JFrame implements ActionListener {
 	JButton pick, pick1, pick2, pick3;
+	
+	public static int charPick = 0;
+	
 	Pick() {
 		JPanel pn = new JPanel();
 		setLocationRelativeTo(null);
 		setLayout(null); 
 		
-
+		ImageIcon image = new ImageIcon("res\\BackGround.jpg");	
+		JLabel img = new JLabel(image);
+		img.setBounds(0, 0, 640, 480);
+		add(img);
 		
-		pick = new JButton(new ImageIcon("img/btLogin.png"));//이미지 여기다 넣기
-		pick1 = new JButton(new ImageIcon("img/btLogin.png"));//이미지 여기다 넣기
-		pick2 = new JButton(new ImageIcon("img/btLogin.png"));//이미지 여기다 넣기
+		pick = new JButton(new ImageIcon("res\\B_Left.png"));//이미지 여기다 넣기
+		pick1 = new JButton(new ImageIcon("res\\R_Left.png"));//이미지 여기다 넣기
+		pick2 = new JButton(new ImageIcon("res\\S_Left.png"));//이미지 여기다 넣기
 		pick3 = new JButton("게임 시작");
 		
 		pick.setLocation(20, 120);
@@ -59,13 +65,13 @@ public class Pick extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==pick){//케릭터 선택
-			
+			charPick = 1;
 			} 
 		if(e.getSource()==pick1){//케릭터 선택
-			
+			charPick = 2;
 		} 
 		if(e.getSource()==pick2){//케릭터 선택
-			
+			charPick = 3;
 		}
 		if(e.getSource()==pick3){//게임시작버튼
 			MainUI mainUi = new MainUI();
